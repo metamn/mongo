@@ -32,3 +32,8 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 
 gem "mongoid", "2.0.0.beta.20"
 gem "bson_ext", "1.1.2"
+
+
+gem 'compass', ">= 0.10.6"
+gem 'haml'
+gem 'haml-rails'

@@ -1,6 +1,4 @@
 Mongo::Application.routes.draw do
-  get "frontpage/index"
-
   root :to => "frontpage#index"
   
   
