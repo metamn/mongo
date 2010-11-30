@@ -1,0 +1,16 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @collection.name
+%p
+  %b Description:
+  = @collection.description
+  
+%p
+  %b Products:
+  = @collection.products.collect {|p| [p.name]}.join(", ")
+
+= link_to 'Edit', edit_collection_path(@collection)
+\|
+= link_to 'Back', collections_path

@@ -1,4 +1,8 @@
 Mongo::Application.routes.draw do
+  resources :collections
+
+  resources :products
+
   root :to => "frontpage#index"
   
   

@@ -1,0 +1,23 @@
+%h1 Listing collections
+
+%table
+  %tr
+    %th Name
+    %th Description
+    %th Products
+    %th
+    %th
+    %th
+
+  - @collections.each do |collection|
+    %tr
+      %td= collection.name
+      %td= collection.description
+      %td= collection.products.collect {|p| [p.name]}.join(", ")
+      %td= link_to 'Show', collection
+      %td= link_to 'Edit', edit_collection_path(collection)
+      %td= link_to 'Destroy', collection, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Collection', new_collection_path
