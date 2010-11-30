@@ -1,4 +1,9 @@
 Mongo::Application.routes.draw do
+  get "frontpage/index"
+
+  root :to => "frontpage#index"
+  
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
